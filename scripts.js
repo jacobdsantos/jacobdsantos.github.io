@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const h1Element = document.querySelector('h1');
+    const windowWidth = window.innerWidth;
+    let fontSize = Math.min(windowWidth * 0.5, 500); // Example calculation
+    h1Element.style.fontSize = fontSize + 'px';
+
     window.addEventListener('scroll', () => {
         scrollCount++;
         if (!surpriseTriggered && scrollCount >= surpriseThreshold) {

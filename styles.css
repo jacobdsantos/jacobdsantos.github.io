@@ -8,9 +8,11 @@ body {
 }
 
 h1, h2, h3 { 
-    font-family: 'Bebas Neue', sans-serif; /* Headings (Option 1) */
-    font-weight: 400; /* Normal weight for headings */
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400; /* 'Bebas Neue' is inherently bold, 400 is sufficient */
+    margin: auto;         /* Reset default margins */
 }
+
 
 header {
     background: linear-gradient(135deg, #ffcccb, #ff6666);
@@ -44,11 +46,31 @@ nav ul li a {
     padding: 15px 0;
     display: block;
     transition: background-color 0.3s;
+    position: relative; /* Required for the pseudo-element */
 }
 
-nav ul li a:hover {
-    background-color: #ffcccb;
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Underline thickness */
+    background-color: #d46060; /* Your accent color or any desired color */
+    transition: width 0.3s ease;
 }
+
+
+
+nav ul li a:hover {
+    color: #d46060; /* Change text to your desired color on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
 
 section {
     padding: 80px 20px;
@@ -155,6 +177,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 .hero {
     background: url('path/to/your/image.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -167,7 +190,7 @@ footer {
     color: white;
     position: relative;
     z-index: 1;
-    background-image: url('images/IMG_0872.JPEG'); /* Replace with your image */
+    background-image: url('images/IMG_1209.JPEG'); /* Replace with your image */
 }
 
 .hero::after {

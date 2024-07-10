@@ -2,7 +2,7 @@
 
 #our-story {
     background-color: #fff; /* Soft white background */
-    padding: 60px;
+    padding: 5px;
     text-align: center;  /* Center aligns the main content */
 }
 
@@ -10,7 +10,7 @@
 #our-story h2 {
     color: #d46060;  /* Deep red/pink accent color */
     font-size: 3.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
