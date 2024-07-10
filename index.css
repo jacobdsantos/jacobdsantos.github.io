@@ -1,0 +1,55 @@
+/* index.css */
+
+#our-story {
+    background-color: #fff; /* Soft white background */
+    padding: 60px;
+    text-align: center;  /* Center aligns the main content */
+}
+
+/* Main heading for the section */
+#our-story h2 {
+    color: #d46060;  /* Deep red/pink accent color */
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Paragraph styling */
+#our-story p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8; /* Improved line-height for readability */
+    color: #444;  /* Dark gray for body text */
+    max-width: 800px;  /* Limit paragraph width for readability */
+    margin: 0 auto 40px; /* Center the text and add bottom margin */
+}
+
+/* Image Styling (if you have images) */
+#our-story img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    margin-bottom: 20px;
+}
+
+/* Optional: Quote styling */
+#our-story blockquote {
+    font-family: 'Playfair Display', serif; /* Elegant font for quotes */
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #666; /* Lighter gray for quotes */
+    margin: 40px auto;
+    padding: 20px;
+    border-left: 5px solid #d46060; /* Add a colored bar to the left of the quote */
+}
+
+/* Optional: Timeline styling */
+#our-story .timeline {
+    display: flex;
+    flex-direction: column; /* Vertical timeline on smaller screens */
+    align-items: center;
+    gap: 40px;
+}
+
+/* ... Add more styles as needed ... */

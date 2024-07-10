@@ -1,0 +1,53 @@
+/* Gallery Section Container */
+#gallery {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Slides Container */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Carousel Item (Image) */
+.carousel-item {
+    flex: 0 0 100%; 
+    box-sizing: border-box;
+    position: relative; /* For positioning captions */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover; 
+}
+
+/* Image Caption Styling */
+.image-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust position as needed */
+    left: 10px;  /* Adjust position as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px; 
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Fade in effect */
+}
+
+.carousel-item:hover .image-caption {
+    opacity: 1;
+}

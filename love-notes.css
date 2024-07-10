@@ -1,0 +1,34 @@
+/* Love Notes Container */
+.love-notes-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next line if needed */
+    justify-content: center; /* Center notes horizontally */
+    padding: 20px; /* Add some padding around the container */
+}
+
+/* Individual Love Note */
+.love-note {
+    background-color: #fff; 
+    color: #222222; /* Dark text for contrast */
+    border-radius: 20px; 
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: float 4s ease-in-out infinite;
+    font-size: 2.0em;  /* Slightly larger font size for the notes */
+}
+
+/* Love Note Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+/* love-notes.css (or styles.css) */
+#love-notes h2 {
+    cursor: pointer;
+    text-decoration: underline; /* Optional: Underline on hover */
+}
+
+
+
