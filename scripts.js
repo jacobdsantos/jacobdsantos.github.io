@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const h1Element = document.querySelector('h1');
     function adjustH1FontSize() {
         const windowWidth = window.innerWidth;
-        let fontSize = Math.min(windowWidth * 0.5, 300); // Adjust the factor as needed
+        let fontSize = Math.min(windowWidth * 0.5, 150); // Adjust the factor as needed
         h1Element.style.fontSize = fontSize + 'px';
     }
     adjustH1FontSize(); // Initial adjustment
