@@ -48,8 +48,8 @@
 /* Image Caption Styling */
 .image-caption {
     position: absolute;
-    top: 10px; /* Adjust position as needed */
-    left: 10px;  /* Adjust position as needed */
+    bottom: 15px; /* Adjust position as needed */
+    right: 10px;  /* Adjust position as needed */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;
     padding: 8px 12px;
