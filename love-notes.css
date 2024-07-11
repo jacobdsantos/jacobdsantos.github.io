@@ -1,34 +1,78 @@
+/* love-notes.css */
+
+/* Main heading for the section */
+#love-notes h2 {
+    color: #d46060; 
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#love-notes h2:hover {
+    transform: translateY(-5px);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
 /* Love Notes Container */
 .love-notes-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow notes to wrap to the next line if needed */
-    justify-content: center; /* Center notes horizontally */
-    padding: 20px; /* Add some padding around the container */
+    width: 700px; /* Made it a perfect square */
+    height: 700px; /* Made it a perfect square */
+    margin: 20px auto; /* Center the container */
+    padding: 40px;
+    background: linear-gradient(to bottom right, #f2e9e4, #e9d8a6); /* Soft gradient background */
+    border: 4px dashed #d46060; /* Dashed border */
+    border-radius: 25px;
+    position: relative; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    perspective: 800px; /* Add perspective for 3D effect */
 }
 
 /* Individual Love Note */
 .love-note {
-    background-color: #fff; 
-    color: #222222; /* Dark text for contrast */
-    border-radius: 20px; 
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    animation: float 4s ease-in-out infinite;
-    font-size: 2.0em;  /* Slightly larger font size for the notes */
+  background-color: rgba(255, 255, 255, 0.95); /* More transparent white */
+  color: #333; 
+  border: 2px solid #ff6666;      /* Add a charming red border */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Softer, more diffused shadow */
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);   /* Start slightly above final position */
+  transition: opacity 0.5s ease, transform 0.8s ease-in-out;
+  font-size: 1.2em;
+  line-height: 1.6;              /* Better line spacing for readability */
+  z-index: 1;
 }
+
+.love-note.active {
+  opacity: 1;
+  transform: translateY(0);     /* Move to final position on reveal */
+}
+
+.love-note:before {             /* Add a cute heart icon before the note */
+  content: "\2665"; 
+  display: block;
+  color: #ff6666; 
+  font-size: 2em;
+  margin-bottom: 10px; 
+}
+
 
 /* Love Note Animation */
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-/* love-notes.css (or styles.css) */
-#love-notes h2 {
-    cursor: pointer;
-    text-decoration: underline; /* Optional: Underline on hover */
+    0% { transform: translate(0, 0) rotateX(0deg); }
+    25% { transform: translate(150px, -50px) rotateX(15deg); }
+    50% { transform: translate(300px, 0) rotateX(0deg); }
+    75% { transform: translate(150px, 50px) rotateX(-15deg); }
+    100% { transform: translate(0, 0) rotateX(0deg); }
 }
 
-
-
+/* Show love notes one by one on click */
+.love-note.show {
+    opacity: 1;
+    animation: float 5s linear infinite; /* Slower animation for a calmer feel */
+}

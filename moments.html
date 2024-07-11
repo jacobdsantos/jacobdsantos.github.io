@@ -10,60 +10,309 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+<audio id="background-music" loop autoplay>
+    <source src="audio/Steven Curtis Chapman - I Will Be Here (minus).mp3" type="audio/mpeg">
+</audio>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Our Love Story</h1>
-            <p>A journey of love, laughter, and endless memories.</p>
+            <h1 style="align-items: center;">TO YOU, MY LOVE</h1>
+            <p style="font-size:large;">
+                A tribute to our shared journey — a story overflowing with love, laughter, tears, and countless cherished memories. </p>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Our Story</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="moments.html">Special Moments</a></li>
-            <li><a href="love-notes.html">Love Notes</a></li>
+            <li><a href="index.html">FOR YOU</a></li>
+            <li><a href="gallery.html">FOR ME</a></li>
+            <li><a href="moments.html">FOR US</a></li>
+            <li><a href="love-notes.html">MESSAGES</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="moments">
-            <h2>Special Moments</h2>
+            <h2>FOR US</h2>
 
+            
             <div class="moment">
-                <h3>First Date</h3>
-                <p>
-                    The day we first met at that cozy little cafe. I was so nervous, but your smile put me at ease. 
-                    We talked for hours and it felt like we'd known each other forever.
-                </p>
-                <img src="moment1.jpg" alt="First Date"> 
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">New Phone, captured by Luna</h3>
+                    <p>
+                        Pinicturan tayo ni Luna dito. Bagong iPhone haha
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0153.JPEG" alt="Beach Proposal">
+                </div>
             </div>
 
             <div class="moment">
-                <h3>Beach Proposal</h3>
-                <p>
-                    I'll never forget the sunset walk on the beach when you got down on one knee.
-                    Time stood still as you asked me to be yours forever. It was the happiest day of my life.
-                </p>
-                <img src="moment2.jpg" alt="Beach Proposal"> 
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Lucas Christening</h3>
+                    <p>
+                        Binyag ni Kuya Lucas sa Kapitan Moy
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0329.JPEG" alt="Beach Proposal">
+                </div>
             </div>
 
             <div class="moment">
-                <h3>Our First Home</h3>
-                <p>
-                    Moving into our first apartment together was such a milestone. Decorating it with our 
-                    favorite things and creating a space that was truly "ours" was so special.
-                </p>
-                <img src="moment3.jpg" alt="Our First Home"> 
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Baby hugging me tightly</h3>
+                    <p>
+                        Higpit ng pagkakayakap mo dito baby.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0006.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+            
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Spontaneous Trip: Viewscape Nature Park</h3>
+                    <p>
+                        Thank you sa pagsama samin ng friends sa mga sponty adventures
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0419.JPEG" alt="Beach Proposal">
+                </div>
             </div>
 
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Giligan's Selfie</h3>
+                    <p>
+                        Picture muna bago kumain! Smile!!!
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0535.JPEG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Captured ulit by Luna</h3>
+                    <p>
+                        Gala gala lang sa SM San Mateo.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0625.JPEG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">First Actual Studio Picture</h3>
+                    <p>
+                        Ganda mo! I love you baby!
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0153.JPEG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Boracay before Scuba Diving</h3>
+                    <p>
+                        Moments before Scuba Diving sa Boracay.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <video controls width="100%">
+                        <source src="moments/BORA.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Eastwood Mall</h3>
+                    <p>
+                        First time kumain sa Popeyes, naadik na sa susunod.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0668.JPEG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Sofitel, Inlove na Inlove sa kaniya</h3>
+                    <p>
+                        Ito yung nagustuhan kong pic habang nagtitingin tingin ako.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_0919.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Dessert Museum</h3>
+                    <p>
+                        Ang bata pa natin dito, hahaha. With selfie.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_1304.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_1506.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Running Era</h3>
+                    <p>
+                        Itinatakbo nalang ni Baby yung sakit. Iloveyou!
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_2609.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2664.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2706.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2799.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Time-lapse, Camp Hiatus</h3>
+                    <p>
+                        Second Camp. Medyo kumpleto na yung mga gamit.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <video controls width="100%">
+                        <source src="moments/IMG_3631.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">7 YEARS OF LOVE AND CHRISTMAS</h3>
+                    <p>
+                        Christmas Picture and Anniversary Picture
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_2598.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2597.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Selfies with a lot of smiles</h3>
+                    <p>
+                        Sobrang ganda ng smile mo baby. And ang ganda mo palagi. Mahal na mahal kita.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_1781.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2103.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_3113.JPG" alt="Beach Proposal">
+
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">La Union Holiday Camp</h3>
+                    <p>
+                        Sobrang ganda ng smile mo baby. And ang ganda mo palagi. Mahal na mahal kita.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_1350.JPEG" alt="Beach Proposal">
+                    <img src="moments/IMG_8020.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Tagaytay and Tanay</h3>
+                    <p>
+                        Always together and forever. With pandemic or Without pandemic.
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_3778.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_4105.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_9669.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_9542.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">Foodtrip Era</h3>
+                    <p>
+                        Start ng pagkain halos every week. Kaya kitang kita kung paano yung tinaba. Tipulo, Tablo, Beeffalo. 
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_6111.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_9458.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_4961.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_5097.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_7161.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">River Playdate</h3>
+                    <p>
+                        Tamang laro lang sa ilog hahaha. First Camp Hiatus
+                    </p>
+                </div>
+                <div class="media-container">
+                    <video controls width="100%">
+                        <source src="moments/IMG_3637.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                </div>
+            </div>
+
+            <div class="moment">
+                <div class="moment-content" onclick="toggleMedia(this)"> <h3 id="first-date">First Camping and First Tent Selfie</h3>
+                    <p>
+                        Itong wholesome nalang yung pinili ko. Pagkatapos yung trip sa Baras. I love you ;*
+                    </p>
+                </div>
+                <div class="media-container">
+                    <img src="moments/IMG_2348.JPG" alt="Beach Proposal">
+                    <img src="moments/IMG_2547.JPG" alt="Beach Proposal">
+                </div>
+            </div>
+
+            
             </section>
+            <section id="moments">
+                <h2>Collection of our Most Special Moments</h2>
+                <p>Sobrang dami nating pictures baby! Hahaha. Enjoy! </p>
+                <div id="image-collage"> 
+                  </div>
+              </section>
+              <script>
+                const imageCollage = document.getElementById("image-collage");
+                const imageNames = [
+                  "IMG_0009.JPEG", "IMG_0527.JPEG", "IMG_0534.JPEG", "IMG_0542.JPEG", "IMG_0548.JPEG", "IMG_0559.JPEG", "IMG_0562.JPEG", "IMG_0584.JPEG", "IMG_0610.JPEG", "IMG_0636.JPEG", "IMG_0648.JPEG", "IMG_0667.JPEG", "IMG_0672.JPEG", "IMG_0691.JPEG", "IMG_0693.JPEG", "IMG_0730.JPEG", "IMG_0732.JPEG", "IMG_0811.JPEG", "IMG_0859.JPEG", "IMG_0860.JPEG", "IMG_0861.JPEG", "IMG_0872.JPEG", "IMG_0912.JPEG", "IMG_0916.JPEG", "IMG_0918.JPEG", "IMG_0971.JPEG", "IMG_0978.JPEG", "IMG_0981.JPEG", "IMG_0999.JPEG", "IMG_1014.JPEG", "IMG_1033.JPG", "IMG_1034.JPEG", "IMG_1035.JPEG", "IMG_1042.JPEG", "IMG_1069.MOV", "IMG_1080.JPEG", "IMG_1094.JPEG", "IMG_1095.JPEG", "IMG_1100.JPEG", "IMG_1138.JPEG", "IMG_1151.JPEG", "IMG_1159.JPEG", "IMG_1160.JPEG", "IMG_1163.JPEG", "IMG_1165.JPEG", "IMG_1166.JPEG", "IMG_1208.JPEG", "IMG_1209.JPEG", "IMG_1244.JPEG", "IMG_1251.JPEG", "IMG_1322.JPEG", "IMG_1463.JPEG", "IMG_1466.JPEG", "IMG_1469.JPEG", "IMG_1479.JPEG", "IMG_1515.JPG", "IMG_1527.JPEG", "IMG_1529.JPEG", "IMG_1533.JPEG", "IMG_1535.JPEG", "IMG_1559.JPEG", "IMG_1562.JPEG", "IMG_1587.JPEG", "IMG_1592.JPEG", "IMG_1611.JPEG", "IMG_1758.JPEG", "IMG_1763.JPEG", "IMG_1765.JPEG", "IMG_1776.JPEG", "IMG_1796.JPEG", "IMG_1828.JPEG", "IMG_1887.JPEG", "IMG_1933.JPEG", "IMG_1953.JPEG", "IMG_2042.JPEG", "IMG_2081.JPEG", "IMG_2092.JPEG", "IMG_2174.JPEG", "IMG_2201.JPG", "IMG_2623.JPEG", "IMG_2624.JPEG", "IMG_2629.JPEG", "IMG_2632.JPEG", "IMG_2635.JPEG", "IMG_3033.JPEG", "IMG_3100.JPG", "IMG_3365.JPEG", "IMG_3366.JPEG", "IMG_3445.JPG", "IMG_3567.JPG", "IMG_5456.JPEG", "IMG_5458.JPEG", "IMG_6315.JPEG", "IMG_6603.JPEG", "IMG_7079.JPG", "IMG_7086.JPG", "IMG_7725.JPEG", "IMG_8236.JPEG", "IMG_8237.JPEG", "IMG_8866.JPEG", "IMG_9641.JPEG"
+
+                ];
+              
+                imageNames.forEach(imageName => {
+                  const img = document.createElement("img");
+                  img.src = `images/${imageName}`;
+                  img.alt = imageName; // Use image name as alt text
+                  img.className = "collage-image";
+                  imageCollage.appendChild(img);
+                });
+              </script>
+            
     </main>
 
     <footer>
-        <p>Made with ❤️ by [Your Name]</p>
+        <p>This one is us, for our memories: Happy anniversary to us! ❤️</p>
     </footer>
     
     <script src="scripts.js"></script>

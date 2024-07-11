@@ -1,3 +1,18 @@
+
+/* Main heading for the section */
+#moments h2 {
+    color: #d46060;  /* Deep red/pink accent color */
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#moments h3 {
+    color:#f5f5f5; 
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 /* Special Moments Section Styling */
 #moments {
     background-color: #fff;
@@ -7,7 +22,7 @@
 
 /* Special Moment Item Styling */
 .moment {
-    background-color: #f5f5f5;
+    background-color: #333;
     border-radius: 10px;
     padding: 30px;
     margin: 20px auto;
@@ -16,6 +31,7 @@
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange content vertically */
     align-items: center;
+    margin-bottom: 30px;  /* Add 30px of space below each .moment */
 }
 
 .moment h3 {
@@ -24,8 +40,9 @@
 }
 
 .moment p {
+    color:#f5f5f5; 
     margin-bottom: 20px;
-    text-align: left; /* Align text to the left for better readability */
+    text-align: center; /* Align text to the left for better readability */
     line-height: 1.6; /* Adjust line height for better readability */
 }
 
@@ -41,3 +58,33 @@
     transform: scale(1.02); /* Slightly scale up on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
+/* ... other styles ... */
+
+.media-container {
+    display: none; /* Hide initially */
+    margin-top: 20px; /* Add space when revealed */
+}
+
+#image-collage {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 50px; /* Add spacing below the collage */
+    padding: 10px 0;   /* Add padding for a nicer look */
+    border-top: 1px solid #ddd; /* Add a subtle top border */
+    border-bottom: 1px solid #ddd; /* Add a subtle bottom border */
+  }
+  
+  .collage-image {
+    width: 150px;   /* Make images a bit larger */
+    height: 150px; 
+    object-fit: cover;
+    margin-right: 15px; /* More space between for a collage feel */
+    border: 1px solid #ddd; /* Simple border for each image */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle drop shadow */
+    transition: transform 0.3s ease; /* Add a smooth transition */
+  }
+  
+  .collage-image:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+  }

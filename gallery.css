@@ -1,7 +1,9 @@
-/* Gallery Section Container */
-#gallery {
-    background-color: #fff;
-    padding: 40px 20px;
+
+#gallery h2 {
+    color: #d46060; 
+    font-size: 3.5rem;
+    margin-bottom: 30px; /* Increased bottom margin for more space */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 /* Carousel Container */
@@ -18,6 +20,8 @@
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    padding: 0; /* Removed the extra space here */
+    margin: 10px;
 }
 
 /* Individual Carousel Item (Image) */
@@ -25,6 +29,13 @@
     flex: 0 0 100%; 
     box-sizing: border-box;
     position: relative; /* For positioning captions */
+    padding: 5px;
+    margin: auto; /* Add spacing between carousel items */
+}
+
+/* Last carousel item should not have right margin */
+.carousel-item:last-child {
+    margin-right: 0;
 }
 
 .carousel-item img {
@@ -37,7 +48,7 @@
 /* Image Caption Styling */
 .image-caption {
     position: absolute;
-    bottom: 10px; /* Adjust position as needed */
+    top: 10px; /* Adjust position as needed */
     left: 10px;  /* Adjust position as needed */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;

@@ -7,12 +7,41 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 { 
+h2, h3 { 
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400; /* 'Bebas Neue' is inherently bold, 400 is sufficient */
+    font-weight: 400px; /* 'Bebas Neue' is inherently bold, 400 is sufficient */
     margin: auto;         /* Reset default margins */
 }
 
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 1000px;
+    padding: auto;
+    margin: auto;
+    margin-bottom: 0; /* Remove the default bottom margin */
+    background: linear-gradient(to right, #ff6666, #ffcccb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-height: 20px; /* Ensure minimum height for the h1 */
+    display: flex;     /* Use flexbox for layout */
+    align-items: center; /* Vertically center the text */
+}
+
+#play-button {
+    background-color: transparent; /* Transparent background */
+    border: none;                 /* No border */
+    color: white;                 /* White text/icon color */
+    font-size: 2.5em;            /* Adjust size as needed */
+    cursor: pointer;              /* Cursor changes to pointer on hover */
+    margin-top: 20px;            /* Add space above the button */
+    margin-bottom: 0;
+    transition: transform 0.3s ease; /* Add a subtle transition effect */
+}
+
+#play-button:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
 
 header {
     background: linear-gradient(135deg, #ffcccb, #ff6666);
@@ -22,10 +51,9 @@ header {
 }
 
 nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(to right, #ff6666, #ffcccb); /* Pink gradient background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    padding: 15px 0; /* Added padding to give links more breathing room */
 }
 
 nav ul {
@@ -34,41 +62,32 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;  /* Vertically center items within the navbar */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 25px; /* Increased margin for better spacing */
+    font-weight: bold;
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 0;
-    display: block;
-    transition: background-color 0.3s;
-    position: relative; /* Required for the pseudo-element */
+    padding: 10px 20px; /* Added padding to make links bigger and easier to click */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smoother transition for all properties */
 }
-
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px; /* Underline thickness */
-    background-color: #d46060; /* Your accent color or any desired color */
-    transition: width 0.3s ease;
-}
-
-
 
 nav ul li a:hover {
-    color: #d46060; /* Change text to your desired color on hover */
+    color: #fff; /* Keep text white on hover */
+    background-color: #d46060; /* Red background on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More prominent shadow on hover */
 }
 
-nav ul li a:hover::after {
-    width: 100%; 
+/* Remove the line effect */
+nav ul li a::after { 
+    content: none; 
 }
 
 
